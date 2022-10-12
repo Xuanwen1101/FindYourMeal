@@ -1,0 +1,22 @@
+{
+  "name": "jsxml-project-xuanwenzheng",
+  "version": "1.0.0",
+  "description": "JSXML Project: Create a Node.js website which consumes at least two APIs.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./index.js",
+    "ui": "browser-sync start --config bs-config.js"
+  },
+  "author": "Xuanwen Zheng",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "axios": "^0.26.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "pug": "^3.0.2"
+  }
+}

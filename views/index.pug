@@ -1,0 +1,22 @@
+extends layout
+
+block layout-content
+  h1#site__title Find Your Meal
+
+
+  div.objects-container
+
+    div.object-item
+      h2.object-title Food Recipes
+      // image token from: https://www.thedailymeal.com/cook/americas-25-favorite-home-cooked-dishes
+      img(src="/images/FoodRecipes.jpg" alt="logo" title="Xuanwen Zheng's Website" height="180")
+      form(action='/searchRecipes' method='GET')
+        input.form__input(autofocus='' placeholder='Search Your Recipe' type='search' name='r')
+
+    div.object-item
+      h2.object-title Food Restaurants
+      // image token from: https://viewthevibe.com/torontos-new-restaurants-mid-june-edition/
+      img(src="/images/FoodRestaurants.jpg" alt="logo" title="Xuanwen Zheng's Website" height="180")
+      form(action='/restaurants' method='GET')
+        input.form__input(autofocus='' placeholder='Search Your Restaurant' type='search' name='t')
+  

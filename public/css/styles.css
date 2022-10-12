@@ -1,0 +1,249 @@
+/* FONT IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Cabin&family=Montserrat:wght@700&display=swap');
+
+/* DEFAULT STYLES/RESETS */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: 'Cabin', sans-serif;
+  font-size: 1em;
+  line-height: 1.25;
+  font-style: normal;
+}
+
+h1,
+h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a,
+a:visited {
+  color: #3a5a40;
+  text-decoration: none;
+}
+
+a:hover {
+  color: orange;
+}
+
+a:active {
+  color: black;
+}
+
+table,
+th,
+td {
+  border: 2px dotted #bc6c25;
+  padding: 0.5em 1em;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+
+/* Header & Footer */
+
+#logo {
+  height: 120px;
+}
+
+#header,
+#footer {
+  background-color: #283618;
+  color: #fefae0;
+  padding: 1em;
+  margin: 0.5em;
+}
+
+
+/* Main */
+#main {
+  min-height: 380px;
+  background-color: #fbf2e4;
+  padding: 1em;
+  margin: 0.5em;
+}
+
+#site__title {
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  color: #283618;
+  font-size: 3.5em;
+  text-transform: capitalize;
+  margin: 25px;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #283618;
+  font-size: 2.5em;
+  text-transform: capitalize;
+  margin: 25px;
+}
+
+.content {
+  margin: 25px;
+}
+
+.main__link {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 3.5em 0;
+}
+
+.main__link a {
+  text-decoration: none;
+  /* border-bottom: solid 4px #3a5a40;; */
+}
+
+
+/* Objects */
+.objects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+  justify-content: center;
+  width: 90%;
+  max-width: 760px;
+  margin: 3em auto;
+}
+
+.object-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  box-shadow: 0px 5px 10px rgba(82, 94, 105, 0.5);
+  padding: 2em 2em;
+  box-sizing: border-box;
+  width: 100%;
+
+  border-top-left-radius: 37px 140px;
+  border-top-right-radius: 23px 130px;
+  border-bottom-left-radius: 110px 19px;
+  border-bottom-right-radius: 120px 24px;
+
+
+  border: solid 3.5px #1a6b75;
+  transform: rotate(-1deg);
+  transition: all 0.13s ease-in;
+}
+
+.object-item:hover {
+  transform: translateY(-10px) rotate(1deg);
+  box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+}
+
+.object-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #283618;
+  font-size: 2em;
+  text-transform: capitalize;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+
+.object-content {
+  font-family: 'Cabin', sans-serif;
+  color: #283618;
+  font-size: 1.1em;
+  text-transform: capitalize;
+  margin-top: 0.5em;
+  line-height: 1.5;
+}
+
+.object-table {
+  margin: 2em 0;
+}
+
+.form__input {
+  font-family: 'Cabin', sans-serif;
+  color: #283618;
+  font-size: 1em;
+  padding: 1.2rem;
+  border: none;
+  box-sizing: border-box;
+  display: block;
+  box-shadow: 0px 5px 10px rgba(82, 94, 105, 0.5);
+  border-radius: 2em;
+  width: 100%;
+  margin-top: 0.5em;
+}
+
+
+
+/* Recipes Page */
+.recipe__prod {
+  border-radius: 2em;
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.recipe__prod img {
+  width: 228px;
+  height: 228px;
+  object-fit: cover;
+}
+
+.recipe__prod a {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #3a5a40;
+
+}
+
+.recipe__prod:hover {
+  background-color: #dda15e;
+  font-weight: 900;
+}
+
+.recipe__title {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.recipe__btn {
+  font-family: 'Cabin', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0.5em 2em;
+  color: #272727;
+  background-color: #FCFCFC;
+  max-width: max-content;
+  align-self: center;
+  border: none;
+  display: block;
+  box-shadow: 0px 4px 10px rgba(111, 128, 143, 0.5);
+  border-radius: 2em;
+}
+
+.recipe__btn:hover {
+  border: 0px 4px 10px rgba(111, 128, 143, 0.5);
+  box-shadow: inset 0px 4px 10px rgba(111, 128, 143, 0.5);
+}
+
+
+/* Restaurants Page */
+.restaurant__table {
+  margin: 2em;
+}

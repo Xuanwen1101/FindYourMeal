@@ -1,0 +1,24 @@
+extends layout
+
+block layout-content
+
+  h1.title #{searchQuery}
+
+  if !recipes
+    p.content No results found for your search key: 
+      strong #{searchQuery}
+
+  else
+    div.row.mt-3
+      each recipe in recipes
+        div.col-sm-6.col-md-4.col-lg-3.mt-3
+          div.recipe__prod
+            a(href="/recipeDetails/"+recipe.id)
+              img(src=""+recipe.image, alt=""+recipe.title)   
+              p.recipe__title.mt-2 #{recipe.title}
+              button.recipe__btn View Details
+
+  
+  h2.main__link
+    a(href="/") Go Back to Recipe Search Page
+        

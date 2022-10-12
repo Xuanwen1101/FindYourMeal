@@ -1,0 +1,28 @@
+extends layout
+
+block layout-content
+
+  h1.title #{category}
+
+  if !restaurants
+    p.content No results found for your search key: 
+      strong #{category}
+
+  else
+    table.restaurant__table
+      thead 
+        tr  
+          th Restaurant Name
+          th Address
+          th Rating
+          th Price Level
+      tbody
+        each restaurant in restaurants   
+          tr 
+            td #{restaurant.name}
+            td #{restaurant.formatted_address}
+            td #{restaurant.rating}
+            td #{restaurant.price_level}
+
+  h2.main__link
+    a(href="/") Go Back to Restaurant Search Page

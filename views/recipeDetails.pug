@@ -1,0 +1,32 @@
+extends layout
+
+block layout-content
+
+  h1.title Recipe Details
+
+  if !details
+    p.content No results found for your selected Recipe Id: 
+      strong #{searchId}
+  else
+
+    div.objects-container
+      
+      div.object-item
+        h2.object-title #{details.title}
+        img(src=""+details.image, alt=""+details.title)
+        table.object-table 
+          thead 
+            tr  
+              th Ingredients Name
+              th Amount
+          tbody
+            each ingredient in details.extendedIngredients 
+              tr 
+                td #{ingredient.name}
+                td #{ingredient.original}
+        p.object-content #{details.instructions}
+
+
+  h2.main__link
+    a(href="/") Go Back to Recipe Search Page
+        
